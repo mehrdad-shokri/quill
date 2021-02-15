@@ -373,6 +373,11 @@ module.exports = function(router, multer) {
     UserController.sendVerificationEmailById(id, defaultResponse(req, res));
   });
 
+  router.post('/bot/checkin', function(req, res) {
+    let email = req.body.email;
+    UserController.checkInByEmail(email, defaultResponse(req, res));
+  });
+
   /**
    * Check in a user. ADMIN ONLY, DUH
    */
