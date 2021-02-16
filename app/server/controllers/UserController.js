@@ -100,7 +100,7 @@ UserController.checkInByEmail = function(email, callback) {
   },
   (err, res) => {
     if (!res) {
-      callback({ message: `Check in failed for ${email}.` });
+      callback(null, { message: `Check in failed for ${email}.` });
     } else {
       callback(null, { message: 'Check in success.', name: res.profile.name });
     }
