@@ -19,10 +19,10 @@ function calculateStats(){
       },
       schools: {},
       year: {
-        '2016': 0,
-        '2017': 0,
-        '2018': 0,
-        '2019': 0,
+        '2022': 0,
+        '2023': 0,
+        '2024': 0,
+        '2025': 0,
       }
     },
 
@@ -45,6 +45,8 @@ function calculateStats(){
       'M': 0,
       'L': 0,
       'XL': 0,
+      '2XL': 0,
+      '3XL': 0,
       'XXL': 0,
       'WXS': 0,
       'WS': 0,
@@ -104,7 +106,7 @@ function calculateStats(){
         newStats.confirmed += user.status.confirmed ? 1 : 0;
 
         // Count confirmed that are mit
-        newStats.confirmedMit += user.status.confirmed && email === "mit.edu" ? 1 : 0;
+        newStats.confirmedMit += user.status.confirmed && email === "cornell.edu" ? 1 : 0;
 
         newStats.confirmedFemale += user.status.confirmed && user.profile.gender == "F" ? 1 : 0;
         newStats.confirmedMale += user.status.confirmed && user.profile.gender == "M" ? 1 : 0;
