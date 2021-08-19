@@ -213,42 +213,15 @@
 
         <div
           class="description"
-          ng-if="dashState('confirmedInPerson')">
+          ng-if="dashState('confirmed')">
+		  
+		  <h3>You are attending <span ng-if="user.confirmation.inPerson && (user.email.split('@')[1] == 'cornell.edu') && (user.profile.school == 'Cornell University'">In-Person</span><span ng-if="!user.confirmation.inPerson || (user.email.split('@')[1] != 'cornell.edu') || (user.profile.school != 'Cornell University'">Virtually</span></h3>
 
           <div
             ng-show="!pastConfirmation"
             class="markdown">
             <h4>
-                Confirmed - In-Person
-            </h4>
-          </div>
-
-          <div
-            class="markdown"
-            ng-bind-html="confirmationText">
-          </div>
-
-          <div class="ui purple button"
-               ui-sref="app.confirmation">
-            {{pastConfirmation ? 'View' : 'Edit'}} your confirmation information
-          </div>
-
-          <div class="ui red button"
-               ng-click="declineAdmission()">
-            Sorry, I can't make it
-          </div>
-
-        </div>
-		
-		<div
-          class="description"
-          ng-if="dashState('confirmedVirtual')">
-
-          <div
-            ng-show="!pastConfirmation"
-            class="markdown">
-            <h4>
-                Confirmed - Virtual
+                {{ DASHBOARD.CONFIRMED_NOT_PAST_TITLE }}
             </h4>
           </div>
 
