@@ -110,7 +110,7 @@ function calculateStats(){
         // Count confirmed that are mit
         newStats.confirmedMit += user.status.confirmed && email === "cornell.edu" ? 1 : 0;
 		
-		newStats.confirmedInPerson += user.confirmation.inPerson && (email === "cornell.edu") && (user.profile.school === 'Cornell University') ? 1 : 0;
+		newStats.confirmedInPerson += (user.status.confirmed && user.confirmation.inPerson && (email === "cornell.edu") && (user.profile.school == 'Cornell University')) ? 1 : 0;
 
         newStats.confirmedFemale += user.status.confirmed && user.profile.gender == "F" ? 1 : 0;
         newStats.confirmedMale += user.status.confirmed && user.profile.gender == "M" ? 1 : 0;
