@@ -13,7 +13,7 @@
         <fieldset ng-disabled="pastConfirmation">
 
           <div class="field">
-            <label> What's your phone number? (required) </label>
+            <label> What's your phone number? (Required) </label>
             <p>
               We need this in case we need to get ahold of you!
             </p>
@@ -49,7 +49,7 @@
           </div>
 
           <div class="field">
-            <label> Shirt Size (required) </label>
+            <label> Shirt Size (Required) </label>
             <p>
               Let's get you some swag!
             </p>
@@ -68,7 +68,7 @@
             </select>
           </div>
 
-          <div class="field">
+          <!--<div class="field">
             <label>
               Will you be needing hardware?
             </label>
@@ -88,7 +88,7 @@
               We will have a hardware checkout, and we'll try our best to provide things that would be useful to you - however, we can't guarantee everything. We will publish a list of available hardware closer to the day of the event.
             </p>
             <input type="text" ng-model="user.confirmation.hardware">
-          </div>
+          </div>-->
 
 
           <br>
@@ -121,7 +121,7 @@
           </div>
 
           <div class="field">
-            <label> Skill Sheet (required) </label>
+            <label> Skill Sheet (Required) </label>
             <p>
               Upload a document outlining any skills or experience you'd like to share (ex. resume). PDF preferred!
             </p>
@@ -139,7 +139,7 @@
           <div class="divided title">Legal</div>
 
           <div class="field">
-            <label> Liability Waiver </label>
+            <label> Liability Waiver (Required) </label>
             <p>
               <a
                 target="_blank"
@@ -160,7 +160,7 @@
           </div>
 
           <div class="field">
-            <label> Photo Release </label>
+            <label> Photo Release (Required) </label>
             <p>
               <a
                 target="_blank"
@@ -181,7 +181,7 @@
           </div>
 
           <div class="field">
-            <label> Code of Conduct </label>
+            <label> MLH Code of Conduct (Required) </label>
             <p>
               <a
                 target="_blank"
@@ -199,6 +199,27 @@
                    name="signatureCodeOfConduct"
                    placeholder="Your Full Legal Name"
                    ng-model="user.confirmation.signatureCodeOfConduct">
+          </div>
+		  
+		  <div class="field">
+            <label> MLH Event Logistics Release (Required) </label>
+            <p>
+              By writing my name below, I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the <a href="https://mlh.io/privacy">MLH Privacy Policy</a>. I further agree to the terms of both the <a href="https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md">MLH Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy">MLH Privacy Policy</a>.
+            </p>
+            <input type="text"
+                   name="signatureLogisticsRelease"
+                   placeholder="Your Full Legal Name"
+                   ng-model="user.confirmation.signatureLogisticsRelease">
+          </div>
+		  
+		  <div class="field">
+            <label>
+              MLH Communication Release (Optional)
+            </label>
+            <div class="ui checkbox">
+              <input type="checkbox" ng-model="user.confirmation.communicationRelease">
+              <label> I authorize MLH to send me pre- and post-event informational emails, which contain free credit and opportunities from their partners. </label>
+            </div>
           </div>
 
           <br>

@@ -116,6 +116,24 @@ angular.module('reg')
                 }
               ]
             },
+            signatureCodeOfConduct: {
+              identifier: 'signatureCodeOfConduct',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please type your digital signature.'
+                }
+              ]
+            },
+            signatureLogisticsRelease: {
+              identifier: 'signatureLogisticsRelease',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please type your digital signature.'
+                }
+              ]
+            },
           }
         });
       }
