@@ -152,6 +152,15 @@ angular.module('reg')
                   prompt: 'You must be an adult, college student.'
                 }
               ]
+            },
+			essay: {
+              identifier: 'essay',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please complete the essay question.'
+                }
+              ]
             }
           }
         });
