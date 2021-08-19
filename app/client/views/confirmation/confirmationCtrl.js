@@ -133,7 +133,7 @@ angular.module('reg')
                   prompt: 'Please type your digital signature.'
                 }
               ]
-            },
+            }
           }
         });
       }
