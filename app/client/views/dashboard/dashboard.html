@@ -213,13 +213,42 @@
 
         <div
           class="description"
-          ng-if="dashState('confirmed')">
+          ng-if="dashState('confirmedInPerson')">
 
           <div
             ng-show="!pastConfirmation"
             class="markdown">
             <h4>
-                {{ DASHBOARD.CONFIRMED_NOT_PAST_TITLE }}
+                Confirmed - In-Person
+            </h4>
+          </div>
+
+          <div
+            class="markdown"
+            ng-bind-html="confirmationText">
+          </div>
+
+          <div class="ui purple button"
+               ui-sref="app.confirmation">
+            {{pastConfirmation ? 'View' : 'Edit'}} your confirmation information
+          </div>
+
+          <div class="ui red button"
+               ng-click="declineAdmission()">
+            Sorry, I can't make it
+          </div>
+
+        </div>
+		
+		<div
+          class="description"
+          ng-if="dashState('confirmedVirtual')">
+
+          <div
+            ng-show="!pastConfirmation"
+            class="markdown">
+            <h4>
+                Confirmed - Virtual
             </h4>
           </div>
 

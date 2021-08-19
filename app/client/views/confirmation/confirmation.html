@@ -127,19 +127,6 @@
                    ng-model="user.confirmation.twitter">
           </div>
 
-          <div class="field">
-            <label> Skill Sheet (Required) </label>
-            <p>
-              Upload a document outlining any skills or experience you'd like to share (ex. resume). PDF preferred!
-            </p>
-            <a
-              target="_blank"
-              href="https://www.dropbox.com/request/SsZ9RKl7guBXHOeI5MwA"
-              class="ui pink button">
-              Upload
-            </a>
-          </div>
-
           <br>
           <br>
 
@@ -229,7 +216,7 @@
             </div>
           </div>
 		  
-		  <div class="field" ng-if="user.profile.school == 'Cornell University'">
+		  <div class="field" ng-if="(user.email.split('@')[1] == 'cornell.edu') && (user.profile.school == 'Cornell University')">
             <label>
               Will you be attending in-person? (Cornell Students Only)
             </label>

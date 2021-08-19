@@ -61,9 +61,11 @@ angular.module('reg')
               user.status.admitted &&
               !user.status.confirmed &&
               !user.status.declined;
-          case 'confirmed':
+          case 'confirmedInPerson':
+            return user.status.admitted && user.status.confirmed && !user.status.declined && user.confirmation.inPerson && (user.email.split('@')[1] == 'cornell.edu') && (user.profile.school == 'Cornell University');
+          case 'confirmedVirtual':
             return user.status.admitted && user.status.confirmed && !user.status.declined;
-          case 'declined':
+		  case 'declined':
             return user.status.declined;
         }
         return false;
