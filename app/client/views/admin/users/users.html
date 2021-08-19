@@ -105,6 +105,7 @@
 			<th>Conduct</th>
 			<th>Logi</th>
 			<th>MLH Com</th>
+			<th>In Person</th>
             <th>Details</th>
             <th>Acc/Check/Admin</th>
           </tr>
@@ -254,6 +255,22 @@
                 </i>
 				<i
                   ng-if="!user.confirmation.communicationRelease"
+                  class="red remove circle icon">
+                </i>
+              </span>
+
+            </td>
+			
+			<td
+              class="collapsing">
+
+              <span>
+                <i
+                  ng-if="user.confirmation.inPerson && (user.email.split('@')[1] == 'cornell.edu') && (user.profile.school == 'Cornell University')"
+                  class="green check circle icon">
+                </i>
+				<i
+                  ng-if="!user.confirmation.inPerson || (user.email.split('@')[1] != 'cornell.edu') || (user.profile.school != 'Cornell University')"
                   class="red remove circle icon">
                 </i>
               </span>

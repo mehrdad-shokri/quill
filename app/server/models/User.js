@@ -99,6 +99,7 @@ var confirmation = {
   signatureCodeOfConduct: String,
   signatureLogisticsRelease: String,
   communicationRelease: Boolean,
+  inPerson: Boolean,
 };
 
 var status = {

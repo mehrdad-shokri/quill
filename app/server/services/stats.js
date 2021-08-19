@@ -31,6 +31,8 @@ function calculateStats(){
     submitted: 0,
     admitted: 0,
     confirmed: 0,
+	confirmedVirtual: 0,
+	confirmedInPerson: 0,
     confirmedMit: 0,
     declined: 0,
 
@@ -107,6 +109,8 @@ function calculateStats(){
 
         // Count confirmed that are mit
         newStats.confirmedMit += user.status.confirmed && email === "cornell.edu" ? 1 : 0;
+		
+		newStats.confirmedInPerson += user.confirmation.inPerson && (email === "cornell.edu") && (user.profile.school === 'Cornell University') ? 1 : 0;
 
         newStats.confirmedFemale += user.status.confirmed && user.profile.gender == "F" ? 1 : 0;
         newStats.confirmedMale += user.status.confirmed && user.profile.gender == "M" ? 1 : 0;
@@ -187,6 +191,7 @@ function calculateStats(){
 
         callback(); // let async know we've finished
       }, function() {
+		newStats.confirmedVirtual = newStats.confirmed - newStats.confirmedInPerson;
         // Transform dietary restrictions into a series of objects
         var restrictions = [];
         _.keys(newStats.dietaryRestrictions)

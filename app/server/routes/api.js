@@ -183,7 +183,10 @@ module.exports = function(router) {
                   'profile.description','profile.essay','status.name',
                   'status.completedProfile','status.admitted',
                   'status.confirmed','status.declined','status.checkedIn',
-                  'status.reimbursementGiven',
+                  'status.reimbursementGiven','confirmation.signatureLiability',
+				  'confirmation.signaturePhotoRelease', 'confirmation.signatureCodeOfConduct',
+				  'confirmation.signatureLogisticsRelease', 'confirmation.communicationRelease',
+				  'confirmation.phoneNumber', 'confirmation.shirtSize', 'confirmation.inPerson',
                 ];
     var fs = require('fs');
 
