@@ -136,10 +136,30 @@
                placeholder="Designer, Data Scientist, iOS Wizard, Hacker Extraordinaire"
                ng-model="selectedUser.profile.description">
       </div>
+	  
+	  <div class="field">
+        <label> Major </label>
+        <input type="text" ng-model="selectedUser.profile.major" />
+      </div>
+
+      <div class="field">
+        <label> Github </label>
+        <input type="url" ng-model="selectedUser.profile.github" />
+      </div>
+	  
+	  <div class="field">
+        <label> Twitter </label>
+        <input type="url" ng-model="selectedUser.profile.twitter" />
+      </div>
+
+      <div class="field">
+        <label> Website </label>
+        <input type="url" ng-model="selectedUser.profile.website" />
+      </div>
 
       <div class="field">
         <label>
-            What would you like to learn or get out of HackMIT? (optional)
+            What would you like to learn or get out of BigRed//Hacks? (optional)
         </label>
         <textarea ng-model="selectedUser.profile.essay">
         </textarea>
@@ -198,8 +218,13 @@
         <label> Shirt Size </label>
         <input type="text" ng-model="selectedUser.profile.shirtSize" />
       </div>
+	  
+	  <div class="field">
+        <label> Notes </label>
+        <input type="text" ng-model="selectedUser.confirmation.notes" />
+      </div>
 
-      <div class="field">
+      <!--<div class="field">
         <label> Major </label>
         <input type="text" ng-model="selectedUser.profile.major" />
       </div>
@@ -217,9 +242,9 @@
       <div class="field">
         <label> Resume </label>
         <input type="url" ng-model="selectedUser.profile.resume" />
-      </div>
+      </div>-->
 
-      <div class="ui divider"></div>
+      <!--<div class="ui divider"></div>
 
       <div class="field">
         <label>
@@ -391,7 +416,7 @@
         <textarea ng-model="selectedUser.confirmation.notes"></textarea>
       </div>
 
-    </fieldset>
+    </fieldset>-->
 
   </div>
 </div>

@@ -37,6 +37,27 @@ var profile = {
     min: 0,
     max: 300
   },
+  
+  major: {
+    type: String,
+    min: 1,
+    max: 150,
+  },
+  github: {
+    type: String,
+    min: 1,
+    max: 150,
+  },
+  twitter: {
+    type: String,
+    min: 1,
+    max: 150,
+  },
+  website: {
+    type: String,
+    min: 1,
+    max: 150,
+  },
 
   essay: {
     type: String,
@@ -66,11 +87,6 @@ var confirmation = {
   },
   wantsHardware: Boolean,
   hardware: String,
-
-  major: String,
-  github: String,
-  twitter: String,
-  website: String,
   resume: String,
 
   needsReimbursement: Boolean,

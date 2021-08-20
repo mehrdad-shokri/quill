@@ -85,6 +85,43 @@
                  ng-model="user.profile.description">
         </div>
 		
+		<br>
+	    <br>
+
+	    <div class="divided title"> Skills & Accomplishments </div>
+
+	    <div class="field">
+		  <label> What are you studying? (Required) </label>
+		  <input type="text"
+			     name="major"
+			     placeholder="Computer Science, Product Design, Basket Weaving, etc."
+			     ng-model="user.application.major">
+	    </div>
+
+	    <div class="field">
+	  	  <label> Github </label>
+		  <input type="text"
+			     name="github"
+			     placeholder="https://github.com/foobar"
+			     ng-model="user.application.github">
+	    </div>
+
+	    <div class="field">
+		  <label> Twitter </label>
+		  <input type="text"
+			     name="twitter"
+			     placeholder="https://twitter.com/foobar"
+			     ng-model="user.application.twitter">
+	    </div>
+		
+		<div class="field">
+		  <label> Website </label>
+		  <input type="text"
+			     name="website"
+			     placeholder="https://example.com"
+			     ng-model="user.application.website">
+	    </div>
+		
 		<div class="field">
 		  <label> Resume (Required) </label>
 		  <p>
@@ -97,6 +134,11 @@
 		    Upload
 		  </a>
 	    </div>
+		
+		<br>
+	    <br>
+
+	    <div class="divided title"> More Information </div>
 
         <div class="field">
           <label>

@@ -144,6 +144,15 @@ angular.module('reg')
                 }
               ]
             },
+			major: {
+              identifier: 'major',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'Please enter a field of study.'
+                }
+              ]
+            },
             adult: {
               identifier: 'adult',
               rules: [
