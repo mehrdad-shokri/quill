@@ -14,7 +14,7 @@
 		    Please note that BigRed//Hacks is a hybrid event. If you are a Cornell Student, you will be welcome to attend in-person. However, for all other universities, your hackathon experience will be limited to an online only experience due to COVID-19 restrictions. Online attendees will have access to unique workshops and experiences, as well as virtual components of our in-person events.
 		  </strong>
 	    </p>
-
+<br>
         <div class="divided title">Basic Details</div>
 
         <fieldset ng-disabled="pastConfirmation">
@@ -53,6 +53,20 @@
               </div>
 
             </div>
+          </div>
+          
+          <div class="field">
+            <label> Discord ID (Required) </label>
+            <p>
+              We need your Discord ID so we can give you access to our event Discord Server when it goes live. Being on Discord is required for this event.
+            </p>
+            <p>
+              <a target="_blank" href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">How do I find my Discord ID?</a>
+            </p>
+            <input
+              type="text"
+              name="discord"
+              ng-model="user.confirmation.discordId">
           </div>
 
           <div class="field">
@@ -127,6 +141,76 @@
                    ng-model="user.confirmation.twitter">
           </div>-->
 
+          <br>
+          <br>
+          
+          <div class="divided title">Address</div>
+          
+          <div>
+
+            <div class="ui header">
+              Mailing Address (Required)
+            </div>
+
+            <p>
+              We need your address so we can send you swag from the event! Be sure to input your address even if you are attending in-person, in case we need to mail you swag due to COVID restrictions.
+            </p>
+
+            <div class="field">
+              <label>Full Name</label>
+              <input type="text"
+                     name="name"
+                     ng-model="user.confirmation.address.name">
+            </div>
+
+            <div class="field">
+              <label> Address Line 1 - Street address, P.O. box, company name, c/o </label>
+              <input
+                type="text"
+                name="addressLine1"
+                ng-model="user.confirmation.address.line1">
+            </div>
+
+            <div class="field">
+              <label> Address Line 2 - Apartment, suite, unit, building, floor, etc. </label>
+              <input
+                type="text"
+                name="addressLine2"
+                ng-model="user.confirmation.address.line2">
+            </div>
+
+            <div class="four fields">
+              <div class="field">
+                <label> City </label>
+                <input
+                  type="text"
+                  name="city"
+                  ng-model="user.confirmation.address.city">
+              </div>
+              <div class="field">
+                <label> State/Province/Region </label>
+                <input
+                  type="text"
+                  name="state"
+                  ng-model="user.confirmation.address.state">
+              </div>
+              <div class="field">
+                <label> ZIP / Postal Code </label>
+                <input
+                  type="text"
+                  name="zip"
+                  ng-model="user.confirmation.address.zip">
+              </div>
+              <div class="field">
+                <label> Country </label>
+                <input
+                  type="text"
+                  name="country"
+                  ng-model="user.confirmation.address.country">
+              </div>
+            </div>
+          </div>
+            
           <br>
           <br>
 

@@ -100,6 +100,7 @@ var confirmation = {
     country: String
   },
   receipt: String,
+  discordId: String,
 
   hostNeededFri: Boolean,
   hostNeededSat: Boolean,
