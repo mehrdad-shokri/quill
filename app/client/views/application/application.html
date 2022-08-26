@@ -5,174 +5,144 @@
 
   <div class="ui stackable page grid">
     <div class="column">
-      <div class="ui form"
-            ng-class="{'loading': loading}">
-			
-		<div class="divided title">Note On BigRed//Hacks 2021</div>
-		<p>
-		  <strong>
-		    Please note that BigRed//Hacks is a hybrid event. If you are a Cornell Student, you will be welcome to attend in-person. However, for all other universities, your hackathon experience will be limited to an online only experience due to COVID-19 restrictions. Online attendees will have access to unique workshops and experiences, as well as virtual components of our in-person events.
-		  </strong>
-	    </p>
-<br>
+      <div class="ui form" ng-class="{'loading': loading}">
+
+        <div class="divided title">Note On BigRed//Hacks 2022</div>
+        <p>
+          <strong>
+            Please note that BigRed//Hacks is an in-person event held at Cornell University.
+          </strong>
+        </p>
+        <br>
         <div class="divided title">Basic Information</div>
 
         <fieldset ng-disabled="regIsClosed">
 
-        <div class="field">
-          <label> Email </label>
-          <input type="email"
-                 name="email"
-                 disabled="disabled"
-                 ng-model="user.email">
-        </div>
+          <div class="field">
+            <label> Email </label>
+            <input type="email" name="email" disabled="disabled" ng-model="user.email">
+          </div>
 
-        <div class="field">
-          <label> Full Name </label>
-          <input type="text"
-                 name="name"
-                 ng-model="user.profile.name">
-        </div>
+          <div class="field">
+            <label> Full Name </label>
+            <input type="text" name="name" ng-model="user.profile.name">
+          </div>
 
-        <div class="field" ng-show="autoFilledSchool">
-          <label> School </label>
-          <input class="ui input"
-                 disabled="disabled"
-                 ng-show="autoFilledSchool"
-                 ng-model="user.profile.school">
-        </div>
+          <div class="field" ng-show="autoFilledSchool">
+            <label> School </label>
+            <input class="ui input" disabled="disabled" ng-show="autoFilledSchool" ng-model="user.profile.school">
+          </div>
 
-        <div class="field" ng-show="!autoFilledSchool">
-          <label> School </label>
-          <div id="school" class="ui search">
-            <div class="ui input">
-              <input class="prompt" type="text" placeholder="School" name="school" ng-model="user.profile.school">                
+          <div class="field" ng-show="!autoFilledSchool">
+            <label> School </label>
+            <div id="school" class="ui search">
+              <div class="ui input">
+                <input class="prompt" type="text" placeholder="School" name="school" ng-model="user.profile.school">
+              </div>
+              <div class="results"></div>
             </div>
-            <div class="results"></div>
           </div>
-        </div>
 
-        <div class="field">
-          <label>Graduation Year</label>
-          <select
-            name="year"
-            ng-model="user.profile.graduationYear">
-            <option value="">Graduation Year</option>
-            <option value="2022">2022</option>
-            <option value="2023">2023</option>
-            <option value="2024">2024</option>
-            <option value="2025">2025</option>
-          </select>
-        </div>
+          <div class="field">
+            <label>Graduation Year</label>
+            <select name="year" ng-model="user.profile.graduationYear">
+              <option value="">Graduation Year</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+            </select>
+          </div>
 
-        <div class="field">
-          <label>Gender</label>
-          <select
-            name="gender"
-            ng-model="user.profile.gender">
-            <option value="">Gender</option>
-            <option value="M">Male</option>
-            <option value="F">Female</option>
-            <option value="O">Other</option>
-            <option value="N">I prefer not to answer.</option>
-          </select>
-        </div>
+          <div class="field">
+            <label>Gender</label>
+            <select name="gender" ng-model="user.profile.gender">
+              <option value="">Gender</option>
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+              <option value="O">Other</option>
+              <option value="N">I prefer not to answer.</option>
+            </select>
+          </div>
 
-        <div class="field">
-          <label>I would describe myself as a...</label>
-          <input type="text"
-                 placeholder="Designer, Data Scientist, iOS Wizard, Hacker Extraordinaire"
-                 ng-model="user.profile.description">
-        </div>
-		
-		<br>
-	    <br>
+          <div class="field">
+            <label>I would describe myself as a...</label>
+            <input type="text" placeholder="Designer, Data Scientist, iOS Wizard, Hacker Extraordinaire"
+              ng-model="user.profile.description">
+          </div>
 
-	    <div class="divided title"> Skills & Accomplishments </div>
+          <br>
+          <br>
 
-	    <div class="field">
-		  <label> What are you studying? (Required) </label>
-		  <input type="text"
-			     name="major"
-			     placeholder="Computer Science, Product Design, Basket Weaving, etc."
-			     ng-model="user.profile.major">
-	    </div>
+          <div class="divided title"> Skills & Accomplishments </div>
 
-	    <div class="field">
-	  	  <label> Github </label>
-		  <input type="text"
-			     name="github"
-			     placeholder="https://github.com/foobar"
-			     ng-model="user.profile.github">
-	    </div>
+          <div class="field">
+            <label> What are you studying? (Required) </label>
+            <input type="text" name="major" placeholder="Computer Science, Product Design, Basket Weaving, etc."
+              ng-model="user.profile.major">
+          </div>
 
-	    <div class="field">
-		  <label> Twitter </label>
-		  <input type="text"
-			     name="twitter"
-			     placeholder="https://twitter.com/foobar"
-			     ng-model="user.profile.twitter">
-	    </div>
-		
-		<div class="field">
-		  <label> Website </label>
-		  <input type="text"
-			     name="website"
-			     placeholder="https://example.com"
-			     ng-model="user.profile.website">
-	    </div>
-		
-		<div class="field">
-		  <label> Resume (Required) </label>
-		  <p>
-		    Please upload your resume to our resume Dropbox. PDF preferred! Your resume will be shared with our sponsors if you confirm your spot at BigRed//Hacks 2021.
-		  </p>
-		  <a
-		    target="_blank"
-		    href="https://www.dropbox.com/request/SsZ9RKl7guBXHOeI5MwA"
-		    class="ui pink button">
-		    Upload
-		  </a>
-	    </div>
-		
-		<br>
-	    <br>
+          <div class="field">
+            <label> Github </label>
+            <input type="text" name="github" placeholder="https://github.com/foobar" ng-model="user.profile.github">
+          </div>
 
-	    <div class="divided title"> More Information </div>
+          <div class="field">
+            <label> Twitter </label>
+            <input type="text" name="twitter" placeholder="https://twitter.com/foobar" ng-model="user.profile.twitter">
+          </div>
 
-        <div class="field">
-          <label>
+          <div class="field">
+            <label> Website </label>
+            <input type="text" name="website" placeholder="https://example.com" ng-model="user.profile.website">
+          </div>
+
+          <div class="field">
+            <label> Resume (Required) </label>
+            <p>
+              Please upload your resume to our resume Dropbox. PDF preferred! Your resume will be shared with our
+              sponsors if you confirm your spot at BigRed//Hacks 2022.
+            </p>
+            <a target="_blank" href="https://www.dropbox.com/request/SsZ9RKl7guBXHOeI5MwA" class="ui pink button">
+              Upload
+            </a>
+          </div>
+
+          <br>
+          <br>
+
+          <div class="divided title"> More Information </div>
+
+          <div class="field">
+            <label>
               What would you like to learn or get out of BigRed//Hacks? (Required)
-          </label>
-          <textarea name="essay" ng-model="user.profile.essay">
+            </label>
+            <textarea name="essay" ng-model="user.profile.essay">
           </textarea>
-        </div>
-
-        <div class="field"
-             ng-hide="isMitStudent">
-          <p>
-            Checking the box below affirms that you are or will be 18 years or older by September 24th, 2021.
-          </p>
-          <p>
-            <strong>
-            We will be checking ID. If you are a minor, you will be turned away at the door.
-            </strong>
-          </p>
-          <div class="ui checkbox">
-            <input type="checkbox" id="adult" ng-model="user.profile.adult">
-            <label for="adult">I am 18 or older.</label>
           </div>
-        </div>
 
-        <br>
+          <div class="field" ng-hide="isMitStudent">
+            <p>
+              Checking the box below affirms that you are or will be 18 years or older by September 14th, 2022.
+            </p>
+            <p>
+              <strong>
+                We will be checking ID. If you are a minor, you will be turned away at the door.
+              </strong>
+            </p>
+            <div class="ui checkbox">
+              <input type="checkbox" id="adult" ng-model="user.profile.adult">
+              <label for="adult">I am 18 or older.</label>
+            </div>
+          </div>
 
-        <div class="field" ng-hide="regIsClosed">
-          <button type="submit"
-                  class="fluid ui purple button"
-                  ng-click="submitForm()">
-            Submit
-          </button>
-        </div>
+          <br>
+
+          <div class="field" ng-hide="regIsClosed">
+            <button type="submit" class="fluid ui purple button" ng-click="submitForm()">
+              Submit
+            </button>
+          </div>
 
         </fieldset>
       </div>

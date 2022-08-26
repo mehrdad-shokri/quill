@@ -7,14 +7,14 @@
     <div class="column">
 
       <div class="ui form">
-	  
-		<div class="divided title">Note On BigRed//Hacks 2021</div>
-		<p>
-		  <strong>
-		    Please note that BigRed//Hacks is a hybrid event. If you are a Cornell Student, you will be welcome to attend in-person. However, for all other universities, your hackathon experience will be limited to an online only experience due to COVID-19 restrictions. Online attendees will have access to unique workshops and experiences, as well as virtual components of our in-person events.
-		  </strong>
-	    </p>
-<br>
+
+        <div class="divided title">Note On BigRed//Hacks 2022</div>
+        <p>
+          <strong>
+            Please note that BigRed//Hacks is an in-person event so you will have to be at Cornell University to attend.
+          </strong>
+        </p>
+        <br>
         <div class="divided title">Basic Details</div>
 
         <fieldset ng-disabled="pastConfirmation">
@@ -24,11 +24,8 @@
             <p>
               We need this in case we need to get ahold of you!
             </p>
-            <input type="tel"
-                   name="phone"
-                   ng-model="user.confirmation.phoneNumber"
-                   placeholder="(123) - 555 - 1234"
-                   required>
+            <input type="tel" name="phone" ng-model="user.confirmation.phoneNumber" placeholder="(123) - 555 - 1234"
+              required>
           </div>
 
           <div class="field">
@@ -44,8 +41,7 @@
           </div>
 
           <div class="inline fields">
-            <div class="field"
-              ng-repeat="(key, value) in dietaryRestrictions">
+            <div class="field" ng-repeat="(key, value) in dietaryRestrictions">
 
               <div class="ui checkbox">
                 <input type="checkbox" ng-model="dietaryRestrictions[key]" />
@@ -54,19 +50,19 @@
 
             </div>
           </div>
-          
+
           <div class="field">
             <label> Discord ID (Required) </label>
             <p>
-              We need your Discord ID so we can give you access to our event Discord Server when it goes live. Being on Discord is required for this event.
+              We need your Discord ID so we can give you access to our event Discord Server when it goes live. Being on
+              Discord is required for this event.
             </p>
             <p>
-              <a target="_blank" href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">How do I find my Discord ID?</a>
+              <a target="_blank"
+                href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">How
+                do I find my Discord ID?</a>
             </p>
-            <input
-              type="text"
-              name="discord"
-              ng-model="user.confirmation.discordId">
+            <input type="text" name="discord" ng-model="user.confirmation.discordId">
           </div>
 
           <div class="field">
@@ -74,10 +70,7 @@
             <p>
               Let's get you some swag!
             </p>
-            <select
-              name="shirt"
-              ng-model="user.confirmation.shirtSize"
-              required>
+            <select name="shirt" ng-model="user.confirmation.shirtSize" required>
               <option value="">Shirt Size</option>
               <option value="XS">Unisex X-Small</option>
               <option value="S">Unisex Small</option>
@@ -143,9 +136,9 @@
 
           <br>
           <br>
-          
+
           <div class="divided title">Address</div>
-          
+
           <div>
 
             <div class="ui header">
@@ -153,64 +146,45 @@
             </div>
 
             <p>
-              We need your address so we can send you swag from the event! Be sure to input your address even if you are attending in-person, in case we need to mail you swag due to COVID restrictions.
+              We need your address so we can send you swag from the event! Be sure to input your address even if you are
+              attending in-person, in case we need to mail you swag due to COVID restrictions.
             </p>
 
             <div class="field">
               <label>Full Name</label>
-              <input type="text"
-                     name="name"
-                     ng-model="user.confirmation.address.name">
+              <input type="text" name="name" ng-model="user.confirmation.address.name">
             </div>
 
             <div class="field">
               <label> Address Line 1 - Street address, P.O. box, company name, c/o </label>
-              <input
-                type="text"
-                name="addressLine1"
-                ng-model="user.confirmation.address.line1">
+              <input type="text" name="addressLine1" ng-model="user.confirmation.address.line1">
             </div>
 
             <div class="field">
               <label> Address Line 2 - Apartment, suite, unit, building, floor, etc. </label>
-              <input
-                type="text"
-                name="addressLine2"
-                ng-model="user.confirmation.address.line2">
+              <input type="text" name="addressLine2" ng-model="user.confirmation.address.line2">
             </div>
 
             <div class="four fields">
               <div class="field">
                 <label> City </label>
-                <input
-                  type="text"
-                  name="city"
-                  ng-model="user.confirmation.address.city">
+                <input type="text" name="city" ng-model="user.confirmation.address.city">
               </div>
               <div class="field">
                 <label> State/Province/Region </label>
-                <input
-                  type="text"
-                  name="state"
-                  ng-model="user.confirmation.address.state">
+                <input type="text" name="state" ng-model="user.confirmation.address.state">
               </div>
               <div class="field">
                 <label> ZIP / Postal Code </label>
-                <input
-                  type="text"
-                  name="zip"
-                  ng-model="user.confirmation.address.zip">
+                <input type="text" name="zip" ng-model="user.confirmation.address.zip">
               </div>
               <div class="field">
                 <label> Country </label>
-                <input
-                  type="text"
-                  name="country"
-                  ng-model="user.confirmation.address.country">
+                <input type="text" name="country" ng-model="user.confirmation.address.country">
               </div>
             </div>
           </div>
-            
+
           <br>
           <br>
 
@@ -219,30 +193,26 @@
           <div class="field">
             <label> Liability Waiver (Required) </label>
             <p>
-              <a
-                target="_blank"
-                href="/assets/waiver.pdf">
+              <a target="_blank" href="/assets/waiver.pdf">
                 Liability and Photo Release Waiver
               </a>
             </p>
             <p>
-              For legal reasons, our university asks that you read and accept the terms of our liability waiver. Again, as we mentioned in the original application - you <strong> must </strong> be 18 years or older by the day of the event, or we will refuse you admission at the door.<
-            </p>
-            <p>
-              By writing my name below, I affirm that I have read and accepted the terms of the liability waiver above, and will be 18 years or older at the time of the event.
-            </p>
-            <input type="text"
-                   name="signatureLiabilityWaiver"
-                   placeholder="Your Full Legal Name"
-                   ng-model="user.confirmation.signatureLiability">
+              For legal reasons, our university asks that you read and accept the terms of our liability waiver. Again,
+              as we mentioned in the original application - you <strong> must </strong> be 18 years or older by the day
+              of the event, or we will refuse you admission at the door.< </p>
+                <p>
+                  By writing my name below, I affirm that I have read and accepted the terms of the liability waiver
+                  above, and will be 18 years or older at the time of the event.
+                </p>
+                <input type="text" name="signatureLiabilityWaiver" placeholder="Your Full Legal Name"
+                  ng-model="user.confirmation.signatureLiability">
           </div>
 
           <div class="field">
             <label> Photo Release (Required) </label>
             <p>
-              <a
-                target="_blank"
-                href="/assets/waiver.pdf">
+              <a target="_blank" href="/assets/waiver.pdf">
                 Liability and Photo Release Waiver
               </a>
             </p>
@@ -252,61 +222,49 @@
             <p>
               By writing my name below, I affirm that I have read and accepted the terms of the photo release above.
             </p>
-            <input type="text"
-                   name="signaturePhotoRelease"
-                   placeholder="Your Full Legal Name"
-                   ng-model="user.confirmation.signaturePhotoRelease">
+            <input type="text" name="signaturePhotoRelease" placeholder="Your Full Legal Name"
+              ng-model="user.confirmation.signaturePhotoRelease">
           </div>
 
           <div class="field">
             <label> MLH Code of Conduct (Required) </label>
             <p>
-              <a
-                target="_blank"
-                href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">
+              <a target="_blank" href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">
                 MLH Code of Conduct
               </a>
             </p>
             <p>
-              It is extremely important to us that attendees follow a set of guidelines to make the event fun for everyone involved. Please read through and make sure you understand what we will be expecting of you.
+              It is extremely important to us that attendees follow a set of guidelines to make the event fun for
+              everyone involved. Please read through and make sure you understand what we will be expecting of you.
             </p>
             <p>
               By writing my name below, I affirm that I have read and will abide by the code of conduct detailed above.
             </p>
-            <input type="text"
-                   name="signatureCodeOfConduct"
-                   placeholder="Your Full Legal Name"
-                   ng-model="user.confirmation.signatureCodeOfConduct">
+            <input type="text" name="signatureCodeOfConduct" placeholder="Your Full Legal Name"
+              ng-model="user.confirmation.signatureCodeOfConduct">
           </div>
-		  
-		  <div class="field">
+
+          <div class="field">
             <label> MLH Event Logistics Release (Required) </label>
             <p>
-              By writing my name below, I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the <a href="https://mlh.io/privacy">MLH Privacy Policy</a>. I further agree to the terms of both the <a href="https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md">MLH Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy">MLH Privacy Policy</a>.
+              By writing my name below, I authorize you to share my application/registration information with Major
+              League Hacking for event administration, ranking, and MLH administration in-line with the <a
+                href="https://mlh.io/privacy">MLH Privacy Policy</a>. I further agree to the terms of both the <a
+                href="https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md">MLH
+                Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy">MLH Privacy Policy</a>.
             </p>
-            <input type="text"
-                   name="signatureLogisticsRelease"
-                   placeholder="Your Full Legal Name"
-                   ng-model="user.confirmation.signatureLogisticsRelease">
+            <input type="text" name="signatureLogisticsRelease" placeholder="Your Full Legal Name"
+              ng-model="user.confirmation.signatureLogisticsRelease">
           </div>
-		  
-		  <div class="field">
+
+          <div class="field">
             <label>
               MLH Communication Release (Optional)
             </label>
             <div class="ui checkbox">
               <input type="checkbox" ng-model="user.confirmation.communicationRelease">
-              <label> I authorize MLH to send me pre- and post-event informational emails, which contain free credit and opportunities from their partners. </label>
-            </div>
-          </div>
-		  
-		  <div class="field" ng-if="(user.email.split('@')[1] == 'cornell.edu') && (user.profile.school == 'Cornell University')">
-            <label>
-              Will you be attending in-person? (Cornell Students Only)
-            </label>
-            <div class="ui checkbox">
-              <input type="checkbox" ng-model="user.confirmation.inPerson">
-              <label> Yes, I will be attending BigRed//Hacks 2021 in-person. </label>
+              <label> I authorize MLH to send me pre- and post-event informational emails, which contain free credit and
+                opportunities from their partners. </label>
             </div>
           </div>
 
@@ -322,14 +280,11 @@
             <p>
               If there's anything else you need to let us know, tell us here!
             </p>
-            <textarea
-              ng-model="user.confirmation.notes"></textarea>
+            <textarea ng-model="user.confirmation.notes"></textarea>
           </div>
 
           <div class="field" ng-hide="regIsClosed">
-            <button type="submit"
-                    class="fluid ui purple button"
-                    ng-click="submitForm()">
+            <button type="submit" class="fluid ui purple button" ng-click="submitForm()">
               Submit
             </button>
           </div>
