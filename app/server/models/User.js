@@ -359,7 +359,7 @@ schema.statics.validateProfile = function (profile, cb) {
     profile.name.length > 0 &&
     profile.adult &&
     profile.school.length > 0 &&
-    ['2022', '2023', '2024', '2025', '2026'].indexOf(profile.graduationYear) > -1 &&
+    ['2022', '2023', '2024', '2025', '2026', 'O'].indexOf(profile.graduationYear) > -1 &&
     ['M', 'F', 'Non-binary', 'O', 'N'].indexOf(profile.gender) > -1
     ['H/L', 'C', 'B/AA', 'NH/PI', 'A', 'SA', 'AI/AN', 'ME', 'O', 'P'].indexOf(profile.raceOrEthnicity) > -1
   ));
