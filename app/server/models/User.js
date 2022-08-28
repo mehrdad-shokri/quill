@@ -28,7 +28,7 @@ var profile = {
   graduationYear: {
     type: String,
     enum: {
-      values: '2022 2023 2024 2025'.split(' '),
+      values: '2022 2023 2024 2025 2026'.split(' '),
     }
   },
 
@@ -58,7 +58,6 @@ var profile = {
     min: 1,
     max: 150,
   },
-
   essay: {
     type: String,
     min: 0,
@@ -69,7 +68,14 @@ var profile = {
   gender: {
     type: String,
     enum: {
-      values: 'M F O N'.split(' ')
+      values: 'M F O Non-binary N'.split(' ')
+    }
+  },
+
+  raceOrEthnicity: {
+    type: String,
+    enum: {
+      values: 'H/L C B/AA NH/PI A SA AI/AN ME O P'.split(' ')
     }
   },
 
@@ -355,6 +361,7 @@ schema.statics.validateProfile = function (profile, cb) {
     profile.school.length > 0 &&
     ['2022', '2023', '2024', '2025', '2026'].indexOf(profile.graduationYear) > -1 &&
     ['M', 'F', 'Non-binary', 'O', 'N'].indexOf(profile.gender) > -1
+    ['H/L', 'C', 'B/AA', 'NH/PI', 'A', 'SA', 'AI/AN', 'ME', 'O', 'P'].indexOf(profile.raceOrEthnicity) > -1
   ));
 };
 
